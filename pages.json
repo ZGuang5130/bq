@@ -1,0 +1,92 @@
+{
+	"easycom": {
+	  "autoscan": true,
+	  "custom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+	    "^uni-(.*)": "@/components/uni-$1/uni-$1.vue", // 匹配components目录内的vue文件
+	    "^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue" // 匹配node_modules内的vue文件
+	  }
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "每天进步一点点",
+				"app-plus": {
+					"scrollIndicator": "none"
+				}
+			}
+			
+		},
+		{
+			"path":"pages/tabbar/mindMap",
+			"style": {
+				"navigationBarTitleText":"好友"
+			}
+		},
+		{
+			"path":"pages/tabbar/mood",
+			"style": {
+				"navigationBarTitleText":"发布"
+			}
+		},
+		{
+			"path":"pages/tabbar/mypage",
+			"style": {
+				"navigationBarTitleText":"我的"
+			}
+		}
+	    ,{
+            "path" : "pages/note/noteBp",
+            "style" : {
+				"app-plus": {
+					"scrollIndicator": "none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/plan/addPlan",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/plan/popCenter",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus":{
+			"scrollIndicator":"none"
+		}
+	},
+	"tabBar":{
+		"color":"#C0C0C0",
+		"height":"56px",
+		"backgroundColor":"#F1F1F1",
+		"selectedColor":"#F0AD4E",
+		"list": [{
+			"pagePath":"pages/index/index",
+			"iconPath":"static/tabbarpng/nav_bottom_ico1.png",
+			"selectedIconPath":"static/tabbarpng/nav_bottom_cr_ico1.png",
+			"text":"首页"
+		},{
+			"pagePath":"pages/tabbar/mindMap",
+			"iconPath":"static/tabbarpng/nav_bottom_ico4.png",
+			"selectedIconPath":"static/tabbarpng/nav_bottom_cr_ico4.png",
+			"text":"关系"
+		},{
+			"pagePath":"pages/tabbar/mood",
+			"iconPath":"static/tabbarpng/nav_bottom_ico3.png",
+			"selectedIconPath":"static/tabbarpng/nav_bottom_cr_ico3.png",
+			"text":"发布"
+		},{
+			"pagePath":"pages/tabbar/mypage",
+			"iconPath":"static/tabbarpng/nav_bottom_ico2.png",
+			"selectedIconPath":"static/tabbarpng/nav_bottom_cr_ico2.png",
+			"text":"我的"
+		}]
+	}
+}
