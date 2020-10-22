@@ -5,8 +5,8 @@
 		},
 		onShow: function() {
 			console.log(this)
-			this.phoneWidth = this.$el.clientWidth
-			this.phoneHeight = this.$el.clientHeight
+			this.$refs.phoneWidth = this.$el.clientWidth
+			this.$refs.phoneHeight = this.$el.clientHeight
 			// Vue.component('phoneWidth',this.$el.clientWidth)
 			// console.log(phoneWidth)
 			// console.log(phoneHeight)
